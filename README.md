@@ -2,15 +2,20 @@
 
 ### Purpose of this Project
 
-The purpose of this project is to demonstrate the ability to collect, work with and clean a data set. The requirements of this project are to produce a tidy data set; an R script that produces the data set; a codebook describing the variables, the data, and any transformations or work performed to clean up the data called CodeBook.md; and this README.md file that describes the backgroud on the task and gives all information necessary to run the script.
+The purpose of this project is to demonstrate the ability to collect, work with and clean a data set. The requirements of this project are to produce:
+
+1. A tidy data set
+2. An R script that produces the data set 
+3. A codebook describing the variables, the data, and any transformations or work performed to clean up the data called CodeBook.md
+4. This README.md file  describing the backgroud on the task and gives all information necessary to run the script.
 
  ---
  
 ## Usage
 
-Make certain the script, *run\_analysis.R* and thedirectory "UCI HAR Dataset" is contained in the same working directory. While in R, source the file *run\_analysis.R*. The script will produce a text file called HARsummary.txt and will also leave a data frame called tidy_sdf in the R workspace. tidy_sdf is wrapped by tbl_df for convenience. 
+Make certain the script, **run\_analysis.R** and thedirectory **UCI HAR Dataset** are contained in the same working directory. While in R, source the file **run\_analysis.R**. The script will produce a text file called HARsummary.txt in the working directory and will also leave a data frame called tidy_sdf in the R workspace. tidy_sdf is wrapped by tbl_df for convenience. 
 
-The first row of the text file, HARsummary.txt contains collumn headers the remaining lines are data. The data fields are described in the accompanying file codebook.md. 
+The first line of the text file, HARsummary.txt contains collumn headers the remaining lines are data. The data fields are described in the accompanying file codebook.md. 
 
 ---
 
