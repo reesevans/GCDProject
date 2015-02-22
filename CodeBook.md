@@ -26,8 +26,9 @@ activity_labels.txt | a file providing sthe names of the acgivities associated w
 sub directory: text | a directory containing the test data files 
 sub directory: train | a directory containing the training data files  The sub directories **test** and **train** each contain the following files:
 
-:--- | :--- X_test.txt | the feature vectors values in text format
- y_test.txt | aΩfile consisting of the subject iedentifies (integers range 1-30) sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.  
+:--- | :--- 
+X_test.txt | the feature vectors values in text format
+y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.  
  
  The data sets for training are similarly named. 
  
