@@ -26,7 +26,7 @@ activity_labels.txt | a file providing sthe names of the acgivities associated w
 sub directory: text | a directory containing the test data files 
 sub directory: train | a directory containing the training data files  The sub directories **test** and **train** each contain the following files:
 
-:--- | :--- 
+--- | ---
 X_test.txt | the feature vectors values in text format
 y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.  
  
@@ -39,7 +39,7 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
  Our intent was to extract only the means and standared deviation of each measurement.
  According to the data set documentation fity ties a second a measurement is taken from the accelerometer and gyroscope in the three directions, X,Y,Z. The data sampled at the rate of 50HZ and processed over 128 sample windows with a 50% overlap From each window a 561 features are computed, these vectors are included in the X\_test.tst and X\_train.txt files. For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. This variables are called:
  
- :-----|:----
+ -----|----
  Acc_mean_X | mean of accelerometer reading in X direction.
  Acc_mean_Y | mean of accelerometer reading in Y direction.
  Acc_mean_Z | mean of accelerometer reading in Z direction.
@@ -78,17 +78,16 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
   * each row is a single observation
   
 ### the firet 10 rows of the tidy data set
-  
- :---:|:---:|:----:|:---:|---:|---: 
-  subject| activity |sensor |direction  |       mean   |     std
-       1 |  LAYING  |  Acc   |      X  |0.221598244| -0.9280565
-       1 |  LAYING |   Acc |        Y| -0.040513953 |-0.8368274
-       1 |  LAYING  |  Acc  |       Z |-0.113203554 |-0.8260614
-       1 |  LAYING  | Gyro  |       X |-0.905166796| -0.8232125
-       1 |  LAYING  | Gyro   |      Y |-0.939855015 |-0.3722307
-       1 |  LAYING |  Gyro   |      Z |-0.877204030 |-0.4911670
-       1 | SITTING |   Acc    |     X | 0.261237565 |-0.9772290
-       1 | SITTING  | Acc    |     Y| -0.001308288| -0.9226186
-       1  | SITTING  |  Acc   |      Z| -0.104544182| -0.9395863
-       1  |SITTING |  Gyro   |      X | -0.986834701 | -0.9428547
+ subject| activity |sensor |direction  |       mean   |     std 
+ ---|---|----|---|---|---  
+ 1 |  LAYING  |  Acc   |      X  |0.221598244| -0.9280565
+ 1 |  LAYING |   Acc |        Y| -0.040513953 |-0.8368274
+ 1 |  LAYING  |  Acc  |       Z |-0.113203554 |-0.8260614
+ 1 |  LAYING  | Gyro  |       X |-0.905166796| -0.8232125
+ 1 |  LAYING  | Gyro   |      Y |-0.939855015 |-0.3722307
+ 1 |  LAYING |  Gyro   |      Z |-0.877204030 |-0.4911670
+ 1 | SITTING |   Acc    |     X | 0.261237565 |-0.9772290
+ 1 | SITTING  | Acc    |     Y| -0.001308288| -0.9226186
+ 1  | SITTING  |  Acc   |      Z| -0.104544182| -0.9395863
+ 1  |SITTING |  Gyro   |      X | -0.986834701 | -0.9428547
 
