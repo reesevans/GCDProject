@@ -1,0 +1,4 @@
+
+---|---
+README.txt | a file providing an overall description of processing and the data produced activities_lables.txt | contains the text versions of the activities which are encoded as integers in the data set. features_info.txt | provides a description of each feature in the 561 element feature vector features_txt | a list of the features in the feature vector file. activity_labels.txt | a file providing sthe names of the acgivities associated with an integer code sub directory: text | a directory containing the test data files sub directory: train | a directory containing the training data files  The sub directories **test** and **train** each contain the following files:
+ 
