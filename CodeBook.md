@@ -19,26 +19,27 @@ The provided data sets consist of the following files:
 
 file | description
 ---|---
-README.txt | a file providing an overall description of processing and the data produced activities_lables.txt | contains the text versions of the activities which are encoded as integers in the data set. 
+README.txt | a file providing an overall description of processing and the data produced activities_labels.txt | contains the text versions of the activities which are encoded as integers in the data set. 
 features_info.txt | provides a description of each feature in the 561 element feature vector 
 features_txt | a list of the features in the feature vector file. 
-activity_labels.txt | a file providing sthe names of the acgivities associated with an integer code 
+activity_labels.txt | a file providing sthe names of the activities associated with an integer code 
 sub directory: text | a directory containing the test data files 
 sub directory: train | a directory containing the training data files  The sub directories **test** and **train** each containing the following files:
 
 file | description
 --- | ---
 X_test.txt | the feature vectors values in text format
-y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.  
+y_test.txt | a file consisting of the subject identifiers (integers range 1-30) 
+Inertial Signals | a sub-directory of nine files containing the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the total acceleration in all three directions.  
  
- The data sets for training are similarly named. 
+The data sets for training are similarly named. 
  
  ___
  
 ### Tidying the Data
  
- Our intent was to extract only the means and standared deviation of each measurement.
- According to the data set documentation data measurements are taken from the accelerometer and gyroscope in the three directions, X,Y,Z, relative to the device. The data are sampled at the rate of 50Hz (50 times a second) and processed over windows 128 samples long with a 50% overlap. From each window, 561 features are computed, these feature vectors are included in the X\_test.tst and X\_train.txt files. For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. These variables are called:
+Our intent was to extract only the mean and standared deviation of each measurement.
+According to the data set documentation, data measurements are taken from the accelerometer and gyroscope in the three directions, X,Y,and Z, relative to the device. The data are sampled at the rate of 50Hz (50 times a second) and processed over windows 128 samples long with a 50% overlap. From each window, 561 features are computed, these feature vectors are included in the X\_test.tst and X\_train.txt files. For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. These variables are called:
  
  Variable | meaning
  -----|----
@@ -55,9 +56,9 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
  Gyro_std_Y | standard deviation of gyrosope reading in Y direction.
  Gyro_std_Z | standard deviation of gyrosope reading in Z direction.
  
-Thus the priciple used in tidying the data is that the fundamental variables are subject, activity, sensor, direction, mean, and standard deviation. 
+Thus, the priciple used in tidying the data is that the fundamental variables are subject, activity, sensor, direction, mean, and standard deviation. Note that each item in the table consists of sensor identification (Acc or Gyro), statistic (mean or std) and direction (X,Y,Z). Thus, we have an example of more than one variable in a single column. The goal of our tidying will be to reshape the data so that we have only one variable in each column. 
 
-The data are combined using standard basic R manipulation procudures. The resulting data frame contains the data from both the training and testing data sets with the variables: subject, activity, and the 12 variable identified above. The activity codes are replaced with the corresponding activity labels from the file activity.txt.
+The data are combined using standard basic R manipulation procudures. The resulting data frame contains the data from both the training and testing data sets with the variables: subject, activity, and the 12 variables identified above. The activity codes are replaced with the corresponding activity labels from the file activity.txt.
  
  The data is tidied by the following process:
  
