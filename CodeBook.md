@@ -28,7 +28,7 @@ The provided data sets consist of the following files:
  
  The sub directories **test** and **train** each contain the following files:
  
- :---|:---
+ :--- | :---
  X_test.txt | the feature vectors values in text format
  y_test.txt | a file consisting of the subject iedentifies (integers range 1-30)
  sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.
