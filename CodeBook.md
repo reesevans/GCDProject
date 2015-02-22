@@ -35,10 +35,10 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
  
  ___
  
- ### Tidying the Data
+### Tidying the Data
  
  Our intent was to extract only the means and standared deviation of each measurement.
- According to the data set documentation fity ties a second a measurement is taken from the accelerometer and gyroscope in the three directions, X,Y,Z. The data sampled at the rate of 50HZ and processed over 128 sample windows with a 50% overlap From each window a 561 features are computed, these vectors are included in the X\_test.tst and X\_train.txt files. For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. This variables are called:
+ According to the data set documentation data measurements are taken from the accelerometer and gyroscope in the three directions, X,Y,Z, relative to the device. The data are sampled at the rate of 50Hz (50 times a second) and processed over windows 128 samples long with a 50% overlap. From each window, 561 features are computed, these feature vectors are included in the X\_test.tst and X\_train.txt files. For For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. These variables are called:
  
  Variable | meaning
  -----|----
@@ -55,16 +55,18 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
  Gyro_std_Y | standard deviation of gyrosope reading in Y direction.
  Gyro_std_Z | standard deviation of gyrosope reading in Z direction.
  
- The data are combined using standard basic R manipulation procudures. Teh resulting data frate contains the data from both the training and testing data sets with the variables: subject, activity, and the 12 variable idendtified above. The activity codes are replaced with the corresponding activity labels from the file activity.txt.
+Thus the priciple used in tidying the data is that the fundamental variables are subject, activity, sensor, direction, mean, and standard deviation. 
+
+The data are combined using standard basic R manipulation procudures. The resulting data frate contains the data from both the training and testing data sets with the variables: subject, activity, and the 12 variable idendtified above. The activity codes are replaced with the corresponding activity labels from the file activity.txt.
  
  The data is tidied by the following process:
  
- 1. gathere all the variables except subject and activity into two columns, sensor_stat and Value.
- 1. separage the variable sensor_stat into two variables sensor and stat
+ 1. gather all the variables except subject and activity into two columns, sensor_stat and Value.
+ 1. separate the variable sensor_stat into two variables sensor and stat
  1. group by subject, activity, sensor, and statistic.
  1. summarize the data by calculating the grouped mean of Value called mean_value.
  1. rearrange the columns into (subject, activity, sensor, stat, mean_value)
- 1. use spread to spread the statistic variable into colmuns of meand of the mean measurements and the mean of the statndard devieation measurements by subject, activity, sensor, and direction.
+ 1. spread the statistic variable into colmuns of mean of the mean measurements and the mean of the statndard devieation measurements.
  
  The resulting data frame has the following variables:
  
