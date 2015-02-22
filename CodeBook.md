@@ -26,6 +26,7 @@ activity_labels.txt | a file providing sthe names of the acgivities associated w
 sub directory: text | a directory containing the test data files 
 sub directory: train | a directory containing the training data files  The sub directories **test** and **train** each contain the following files:
 
+file | description
 --- | ---
 X_test.txt | the feature vectors values in text format
 y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) sub-directory: Inertial Signals | a set of nine files cantaining the raw data from the two sensors, accelerometer and gyroscope in each of the three directions (X,Y,Z) also the totla acceleration in all three directions.  
@@ -39,6 +40,7 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
  Our intent was to extract only the means and standared deviation of each measurement.
  According to the data set documentation fity ties a second a measurement is taken from the accelerometer and gyroscope in the three directions, X,Y,Z. The data sampled at the rate of 50HZ and processed over 128 sample windows with a 50% overlap From each window a 561 features are computed, these vectors are included in the X\_test.tst and X\_train.txt files. For the purposes of this project we use only 12 feature vectors, mean and standard deveiation from each sensor in the three diirections. This variables are called:
  
+ Variable | meaning
  -----|----
  Acc_mean_X | mean of accelerometer reading in X direction.
  Acc_mean_Y | mean of accelerometer reading in Y direction.
@@ -78,6 +80,7 @@ y_test.txt | a file consisting of the subject iedentifies (integers range 1-30) 
   * each row is a single observation
   
 ### the firet 10 rows of the tidy data set
+
  subject| activity |sensor |direction  |       mean   |     std 
  ---|---|----|---|---|---  
  1 |  LAYING  |  Acc   |      X  |0.221598244| -0.9280565
